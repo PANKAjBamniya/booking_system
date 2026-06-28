@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://booking-backend-9ld0.onrender.com/api';
 import axios from 'axios';
 
 const apiClient = axios.create({
