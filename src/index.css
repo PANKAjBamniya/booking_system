@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 1rem;
+  /* Palette: #FFF8F8 bg, #FFFFFF surface, #E8B4BC primary, #FCEEEF secondary,
+     #C97C8A accent, #2E2E2E text, #777777 muted, #F1DADA border */
+  --background: oklch(0.984 0.006 10);
+  --foreground: oklch(0.27 0 0);
+  --surface: oklch(1 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.27 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.27 0 0);
+  --primary: oklch(0.82 0.06 10);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.957 0.022 10);
+  --secondary-foreground: oklch(0.27 0 0);
+  --muted: oklch(0.957 0.022 10);
+  --muted-foreground: oklch(0.55 0 0);
+  --accent: oklch(0.64 0.09 15);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.64 0.2 25);
+  --destructive-foreground: oklch(1 0 0);
+  --success: oklch(0.7 0.17 145);
+  --border: oklch(0.92 0.022 15);
+  --input: oklch(0.957 0.022 10);
+  --ring: oklch(0.82 0.06 10);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html,
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
